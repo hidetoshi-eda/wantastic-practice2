@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Wantastic World</title>
+    <link rel="icon"href="favicon5.ico">
+    
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css"> <!-- yahooのリセットCSSで、どんなブラウザーでもある程度統一の表示をしてくれる -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+      FontAwesomeConfig = { searchPseudoElements: true }
+    </script>
+    <script src="https://kit.fontawesome.com/29a2dcd9ab.js" crossorigin="anonymous"></script>
+    
+    <style>
+       .my-icon {
+        font-size: 32px;
+        color: orange;
+     } 
+    </style> 
+    <style>
+      .bg-pink {
+        background: pink;
+      }
+    </style>
+  <!--head内に入れる-->
+  
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['自由', 3],
+          ['愛', 1],
+          ['豊穣', 1],
+          ['平等', 1],
+          ['旗', 2]
+        ]);
+        // Mushrooms Onions Olives Zucchini Pepperoni //
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  <!--head内に入れる-->
+  
+
+  </head>
+  <body>
+    <header>
+      <img src="https://source.unsplash.com/random/800x400" alt="">
+
+    </header>
+    <h1>Wantasticな世界</h1>
+    <div class="example1">
+      それは楽しくて素晴らしい  皆が喜び求める世界
+    </div>
+    <div class="example2">
+      そんな世界を探し求めて行こう！  ボイジャー！
+    </div>
+    
+      <i class="fas fa-flag my-icon"></i>
+      <p>旗がいいですか？</p>
+
+    <span class="fa-stack fa-2x">
+      <i class="fas fa-square fa-stack-2x"></i>
+      <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+    </span>
+    <p>自由がいいですか？</p>
+    <p>それとも・・・</p>
+    <p>ところで今 レッサーパンダ君が見ている物は何でしょう？</p>
+    <img src="img/ressapanda.jpg"width="600"heigth="337"alt="レッサーパンダ君の勇姿の画像">
+    <p>よく分かりましたネ 素晴らしい！まさにファンタスティックだ！！</P>
+    <img src="img/ichigopafe.jpg"width="337"heigth="600"alt="イチゴパフェの画像">
+    <p>そうです 実は彼の一番好きなのはイチゴパフェです</p>
+
+    <?php echo 'Hello world!'; ?>
+    <?='Hello world!'
+    <?php 
+    echo 5+2; //結果: 7
+    echo '5+2'; //結果: 5+2
+    ?>
+
+
+    <div id="target"></div>
+    <script src="http://www.gststic.com/charts/loader.js"></script>
+    <script>
+      (function() {
+        'use strict';
+
+        function drowChart() {
+          var target = document.getElementById('target');
+          var data;
+          var options = {
+            title: 'My Chart',
+            width: 500,
+            height: 300
+          };
+          var chart =new google.visualization.PieChart(target);
+          data = new google.visualization.DataTable();
+          data.addColumn('string', 'Language');
+          data.addColumn('number', 'votes');
+          data.addRow(['PHP', 30]);
+          data.addRow(['Ruby', 20]);
+          data.addRow(['Python', 10]);
+          chart.drow(data, options);
+        }
+
+        google.charts.load('current', {packages: ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+      })();
+    </script>
+  <!--body内に入れる-->
+  <!--Div that will hold the pie chart-->
+  <div id="chart_div"></div>
+  <!--body内に入れる-->
+    
+    <h1>それでは何処に行こうかな？</h1>
+    <nav>
+      <ul>
+        <li><a href="Tabby's house/index.html">タビーの小屋</a></li>
+        <li><a href="Space dream/index.html">宇宙の夢</a></li>
+        <li><a href="Sustainable/index.html">持続可能</a></li>
+      </ul>
+      <img src="img/signpost6-1.jpg" usemap="#ImageMap" alt="道しるべ">
+      <map name="ImageMap">
+        <area shape="rect" coords="201,93,401,138" href="Tabby's house/index.html" alt="タビーの小屋" />
+        <area shape="circle" coords="319,187,48" href="Space dream/index.html" alt="宇宙の夢" />
+        <area shape="poly" coords="230,252,437,212,474,237,453,266,232,297,233,297" href="Sustainable/index.html" alt="持続可能" />
+      </map>
+    </nav>
+
+    
+
+  </body>
+</html>

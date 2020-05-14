@@ -1,0 +1,22 @@
+h1 {
+  width: 300px;
+  padding:0 8px 0 30px;
+  margin: 10px 0 10px 100px;
+
+  background-color: aqua;
+}
+.example1 {
+  width: 350px;
+  padding:0 8px 0 10px;
+  margin: 10px 0 10px 10px;
+
+  background-color: beige;
+}
+.example2 {
+  color: white;
+  width: 350px;
+  padding:0 8px 0 10px;
+  margin: 10px 0 10px 50px;
+
+  background-color: rgb(236, 116, 116);
+}
